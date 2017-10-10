@@ -1,32 +1,51 @@
 package pkgCore;
-
 import static org.junit.Assert.*;
-
 import org.junit.Test;
+import pkgEnum.eRank;
+import pkgEnum.eSuit;
+import pkgException.DeckException;
 
-public class DeckTest {
+public class DeckTest 
+{
 
-	@Test
-	public void TestEmptyDeck() {
-		//TODO: Build a deck, draw until you get a DeckException
+	@Test (expected = DeckException.class) 
+	public void TestEmptyDeck() throws DeckException 
+	{
+		Deck Deck1 = new Deck();
+		for (int z = 1; z <= 100; z++) 
+		{
+			Deck1.Draw();
+		}		
 	}
 	
 	@Test
-	public void TestDrawSuit() {
-		//TODO: Build a deck, test the Draw(eSuit) method
+	public void TestDrawSuit() 
+	{
+		Deck Deck1 = new Deck();
+		Card Card1 = Deck1.Draw(eSuit.DIAMONDS);
+		assertTrue(Card1.geteSuit() == eSuit.DIAMONDS);
 	}
 	
 	@Test
-	public void TestDrawRank() {
-		//TODO: Build a deck, test the Draw(eRank) method
+	public void TestDrawRank() 
+	{
+		Deck Deck1 = new Deck();
+		Card Card1 = Deck1.Draw(eRank.FOUR);
+		assertTrue(Card1.geteRank() == eRank.FOUR);
 	}
 	
-	public void TestDeckRankCount() {
-		//TODO: Build a deck, test the DeckRankCount method
+	@Test
+	public void TestDeckRankCount() 
+	{
+		Deck Deck1 = new Deck();
+		assertEquals(Deck1.Count(eRank.THREE), 4);
 	}
 	
-	public void TestDeckSuitCount() {
-		//TODO: Build a deck, test the DeckSuitCount method
+	@Test
+	public void TestDeckSuitCount() 
+	{
+		Deck Deck1 = new Deck();
+		assertEquals(Deck1.Count(eSuit.CLUBS), 13);
 	}
 
 }
