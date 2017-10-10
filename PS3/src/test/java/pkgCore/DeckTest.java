@@ -7,7 +7,6 @@ import pkgException.DeckException;
 
 public class DeckTest 
 {
-
 	@Test (expected = DeckException.class) 
 	public void TestEmptyDeck() throws DeckException 
 	{

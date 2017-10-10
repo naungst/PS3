@@ -35,7 +35,7 @@ public class Deck
 	{
 		for (Card c: this.cardsInDeck) 
 		{
-			if (c.geteSuit()==eSuit) 
+			if (c.geteSuit() == eSuit) 
 			{
 				cardsInDeck.remove(c); 
 				return c;
@@ -48,7 +48,7 @@ public class Deck
 	{
 		for (Card c: this.cardsInDeck) 
 		{
-			if (c.geteRank()==eRank) 
+			if (c.geteRank() == eRank) 
 			{
 				cardsInDeck.remove(c); 
 				return c;
@@ -62,7 +62,7 @@ public class Deck
 		int iCardNbr = 0;
 		for (Card c: this.cardsInDeck) 
 		{
-			if (c.geteSuit()==eSuit) 
+			if (c.geteSuit() == eSuit) 
 			{
 				iCardNbr++;
 			}
@@ -75,7 +75,7 @@ public class Deck
 		int iCardNbr = 0;
 		for (Card c: this.cardsInDeck) 
 		{
-			if (c.geteRank()==eRank) 
+			if (c.geteRank() == eRank) 
 			{
 				iCardNbr++;
 			}
@@ -88,7 +88,7 @@ public class Deck
 		for (Card crds: cardsInDeck) 
 		{
 			if (crds == c)
-					return 1; 
+				return 1; 
 		}
 		return 0;
 	}
